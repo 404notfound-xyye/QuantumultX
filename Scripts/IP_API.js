@@ -55,7 +55,7 @@ function ISP_ValidCheck(para) {
 
 function Area_check(para) {
   if (para == "中华民国") {
-    return "台湾";
+    return "中华民国";
   } else {
     return para;
   }
@@ -246,8 +246,8 @@ var flags = new Map([
 
 var body = $response.body;
 var obj = JSON.parse(body);
-var title = flags.get(obj["countryCode"]) + " " + City_ValidCheck(obj["city"]); //+Area_check(obj['country']);
-var subtitle = ISP_ValidCheck(obj["org"] || obj.as);
+var title = flags.get(obj["countryCode"]) + " " + City_ValidCheck(obj["city"]) + Area_check(obj['country']);
+var subtitle = obj.as + ISP_ValidCheck(obj["org"]);
 var ip = obj["query"];
 var description =
   "服务商:" +
