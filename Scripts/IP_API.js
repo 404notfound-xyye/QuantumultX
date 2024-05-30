@@ -246,7 +246,7 @@ var flags = new Map([
 
 var body = $response.body;
 var obj = JSON.parse(body);
-var title = flags.get(obj["countryCode"]) + " " + Area_check(obj['country']) + " " + City_ValidCheck(obj["city"]) ;
+var title = flags.get(obj["countryCode"]) + " " + City_ValidCheck(obj["city"]) ;
 var subtitle = obj.as;
 var ip = obj["query"];
 var description =
