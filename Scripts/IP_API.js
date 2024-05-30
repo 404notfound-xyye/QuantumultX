@@ -250,6 +250,9 @@ var title = flags.get(obj["countryCode"]) + " " + City_ValidCheck(obj["city"]) ;
 var subtitle = obj.as + " - " + ISP_ValidCheck(obj["org"] ;
 var ip = obj["query"];
 var description =
+  "AS:" +
+  obj["as"] +
+  "\n" +
   "服务商:" +
   obj["isp"] +
   "\n" +
